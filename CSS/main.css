@@ -53,7 +53,7 @@ header .logo {
 header nav {
     width: 50%;
     height: 80%;
-    border: 1px solid;
+    border: 1px solid var(--nav-bg-dark);
     border-radius: 10px;
 
     position: relative;
