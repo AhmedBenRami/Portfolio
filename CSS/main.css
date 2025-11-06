@@ -80,6 +80,16 @@ header nav ul li:hover {
     color: var(--link-orange);
 }
 
+header nav ul li a {
+    text-decoration: none;
+    font-family: inherit;
+    transition: 0.2s linear;
+}
+
+header nav ul li a:hover {
+    font-size: inherit;
+}
+
 :root {
     --padding-width: 15px;
 }
