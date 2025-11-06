@@ -5,13 +5,19 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Barlow Condensed";
+    font-family: "IBM Plex Sans";
     box-sizing: border-box;
+    color: white;
 }
 
 *::selection {
     background-color: var(--bg-selection);
     color: black;
+}
+
+a:hover {
+    color: var(--link-orange) !important;
+    font-size: 18px;
 }
 
 html,
@@ -22,13 +28,12 @@ body {
 
 body {
     background-color: var(--main-bg-color);
-    /* overflow-y: scroll; */
 }
 
 header {
     width: 100%;
-    min-height: 100px;
-    height: 100px;
+    max-height: 100px;
+    height: 90px;
     display: flex;
     color: var(--h-white);
     box-sizing: content-box;
@@ -42,8 +47,6 @@ header .logo {
     height: 100%;
     background-image: url("../Assets/Icons/logo.svg");
     background-repeat: no-repeat;
-    /* background-position-x: 20px;
-    background-position-y: center; */
     background-position: center;
 }
 
@@ -70,6 +73,7 @@ header nav ul {
 header nav ul li {
     position: relative;
     transition: 0.2s linear;
+    font-family: "Barlow Condensed";
 }
 
 header nav ul li:hover {
@@ -99,7 +103,6 @@ header nav ul li:hover::before {
 }
 
 
-header,
 h1 {
     font-family: "Barlow Condensed";
 }
@@ -107,5 +110,126 @@ h1 {
 main {
     width: 100%;
     height: 200%;
+}
 
+footer {
+    width: 100%;
+    padding: 60px 0;
+
+}
+
+
+footer div.infos {
+    width: 80%;
+    height: 300px;
+    margin-left: 80px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+footer div.infos::before,
+footer div.infos::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--parag-dark);
+    position: absolute;
+    top: -10%;
+}
+
+:root {
+    --left: -50px;
+}
+
+footer div.infos::before {
+    left: var(--left);
+}
+
+footer div.infos::after {
+    left: calc(50% + var(--left));
+}
+
+
+footer div.infos div {
+    width: 50%;
+    height: 50%;
+}
+
+footer .infos div * {
+    font-size: medium;
+    font-weight: 300;
+}
+
+footer .infos div p {
+    color: var(--parag-dark);
+}
+
+footer div.infos div h4 {
+    font-size: x-large;
+    font-weight: normal;
+    color: var(--title-dark);
+    padding: 10px 0;
+    position: relative;
+    margin-top: -1.25em;
+    margin-bottom: 15px;
+}
+
+
+footer div.infos div.open_hour h4,
+footer div.infos div.social_media h4 {
+    margin-top: 0em;
+}
+
+footer div.infos div h4::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: var(--link-orange);
+    position: absolute;
+    top: 0;
+    left: var(--left);
+    z-index: 100;
+}
+
+footer .infos div span a {
+    color: var(--parag-dark);
+}
+
+footer .infos div.social_media span {
+    background-color: var(--box-bg-color);
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 100px 0 0 0;
+    position: relative;
+
+    font-size: large;
+    font-weight: 300;
+}
+
+footer .copyright p {
+    color: var(--parag-dark);
+
+    span {
+        color: inherit;
+        font-style: italic;
+    }
+}
+
+footer .copyright::before {
+    content: "";
+    width: 96%;
+    height: 1px;
+    background-color: var(--nav-bg-dark);
+    position: absolute;
+    top: 35px;
+    left: 2%;
 }
