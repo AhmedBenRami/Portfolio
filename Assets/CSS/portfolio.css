@@ -1,0 +1,166 @@
+html,
+body {
+    max-width: 100%;
+
+}
+
+header nav ul li.main_page a {
+    color: var(--link-orange) !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main section.main_head {
+    width: 100%;
+    min-height: 20vh;
+    margin-top: calc(90px + 30px * 2);
+
+}
+
+main section.main_head h1 span {
+    font-family: "Barlow Condensed";
+    font-weight: 300;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: auto;
+}
+
+main section.main_head h1 span:first-child {
+    color: #333;
+}
+
+main section.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main section.gallery ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+main section.gallery ul li {
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: large;
+}
+
+:root {
+    --nav-adding: 30%;
+}
+
+main section.gallery ul li::after {
+    content: "";
+    display: none;
+    width: calc(100% + var(--nav-adding));
+    height: 3px;
+    background-color: var(--link-orange);
+    position: absolute;
+    bottom: -16px;
+    left: calc(-1 * var(--nav-adding) / 2);
+}
+
+main section.gallery ul li:hover {
+    color: var(--link-orange);
+}
+
+main section.gallery ul li:hover::after {
+    display: block;
+}
+
+main section.gallery .photos {
+    margin-top: 30px;
+    max-width: 95%;
+    column-count: 4;
+    gap: 20px;
+}
+
+
+main section.gallery .photos .photo_item {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+main section.gallery .photos .photo_item img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+main section.gallery .photos .photo_item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+
+main section.gallery .photos .zoom_bg {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: zoom-out;
+
+}
+
+main section.gallery .photos .zoom_img {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 110;
+}
+
+main section.gallery .photos .zoom_img img {
+    display: none;
+    height: 90vh;
+}
+
+/* tablet */
+@media (max-width: 960px) {
+    main section.gallery .photos {
+        column-count: 2;
+    }
+}
+
+/* phone */
+@media (max-width: 767px) {
+    main {
+        max-width: 100vw;
+    }
+
+    main section.gallery .photos {
+        column-count: 1;
+    }
+}
