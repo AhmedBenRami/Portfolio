@@ -213,7 +213,7 @@ main section.gallery-overlay .viewer .controls button {
         column-count: 1;
     }
 
-    main section.gallery-overlay {
+    /* main section.gallery-overlay {
         width: 100%;
         height: 100vh;
         backdrop-filter: blur(10px);
@@ -235,6 +235,6 @@ main section.gallery-overlay .viewer .controls button {
         position: absolute;
         bottom: 0;
         left: 0;
-    }
+    } */
 
 }
