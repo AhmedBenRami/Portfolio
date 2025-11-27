@@ -6,32 +6,53 @@ function load_content() {
     document.querySelector("footer").appendChild(footer);
 }
 load_content();
-// to expand nav menu
 
+
+// to expand nav menu
 document.querySelector(".hamburger-button").addEventListener("click", (e) => {
     const navigation_bar = document.querySelector("nav");
 
     navigation_bar.className = (navigation_bar.className == "") ? "nav-open" : "";
 });
 
+//class for images
+class ImageGallery {
+    constructor(image_array, container_selector, overlay_selector) {
+        this.images = image_array;
+        this.container = document.querySelector(container_selector);
+        this.overlay = document.querySelector(overlay_selector);
+    }
 
-// //to resize the images after clicking on them
-// function image_resize() {
-//     var images = document.querySelectorAll("img");
+    load() {
 
-//     var overlay = document.querySelector("main section.gallery-overlay");
+        for (let info of this.images) {
+            const wrapper = document.createElement("div");
+            wrapper.className = "photo_item";
 
-//     for (let image of images) {
-//         image.onclick = () => {
-//             overlay.style.display = "flex";
-//             overlay.querySelector(".viewer img").src = image.src;
-//         }
-//     }
+            const img = document.createElement("img");
+            img.src = info.url;
+            img.alt = info.alt;
 
-//     var cancel_button = overlay.querySelector(".viewer .controls button");
-//     cancel_button.onclick = () => {
-//         overlay.style.display = "none";
-//     }
-// }
+            wrapper.appendChild(img);
+            this.container.appendChild(wrapper);
 
-// image_resize();
+            // Enable zooming
+            img.addEventListener("click", () => {
+                this.open_overlay(img.src, img.alt);
+            });
+        }
+
+    }
+
+    open_overlay(src, alt) {
+        const viewerImage = this.overlay.querySelector(".viewer img");
+        viewerImage.src = src;
+        viewerImage.alt = alt;
+
+        this.overlay.style.visibility = "visible";
+
+        this.overlay.querySelector(".viewer .controls button").onclick = () => {
+            this.overlay.style.visibility = "hidden";
+        }
+    }
+}
