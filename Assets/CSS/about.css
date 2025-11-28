@@ -207,7 +207,10 @@ h2 .gp{
     justify-content: center;
     width: 100%;
     text-align: center;
+    padding: 20px;
+    margin-bottom:50px ;
 }
+
 .contact-link{
     position: relative;
     width: 15%;
@@ -238,6 +241,7 @@ h2 .gp{
 }
 .showcase{
     height: 100vh;
+    margin-bottom: 50px;
 }
 .fix-back{
     width:100%;
