@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html,
 body {
     max-width: 100%;
@@ -14,15 +21,29 @@ header nav ul li.main_page a {
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 main {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -32,6 +53,7 @@ main section.main_head {
     min-height: 20vh;
     margin-top: 70px;
     padding-left: 20px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
 }
@@ -51,8 +73,15 @@ main section.main_head h1 span:first-child {
 
 main section.gallery {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
 }
@@ -65,8 +94,14 @@ main section.gallery ul {
     list-style: none;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     z-index: 1;
 }
@@ -94,6 +129,8 @@ main section.gallery ul li::after {
     position: absolute;
     bottom: -16px;
     left: calc(-1 * var(--nav-adding) / 2);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -110,8 +147,12 @@ main section.gallery ul li.active::after {
 main section.gallery .photos {
     margin-top: 30px;
     max-width: 95%;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
     column-count: 4;
     gap: 20px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -121,17 +162,25 @@ main section.gallery .photos .photo_item {
     margin-bottom: 20px;
     overflow: hidden;
     cursor: pointer;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 main section.gallery .photos .photo_item img {
     width: 100%;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
 main section.gallery .photos .photo_item img:hover {
+    -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
     transform: scale(1.02);
 }
 
@@ -139,23 +188,38 @@ main section.gallery-overlay {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.61);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     z-index: 1000;
     visibility: hidden;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
 main section.gallery-overlay .viewer {
     height: 70vh;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -164,6 +228,7 @@ main section.gallery-overlay .viewer img {
     max-height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 6px;
+    -o-object-fit: contain;
     object-fit: contain;
 }
 
@@ -171,6 +236,10 @@ main section.gallery-overlay .viewer .controls {
     position: absolute;
     top: 0;
     right: 0;
+
+    -webkit-transform: translateY(-120%);
+
+    -ms-transform: translateY(-120%);
 
     transform: translateY(-120%);
 
@@ -182,12 +251,17 @@ main section.gallery-overlay .viewer .controls button {
     outline: none;
     font-size: xxx-large;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
 /* tablet */
 @media (max-width: 960px) {
     main section.gallery .photos {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
         column-count: 2;
     }
 }
@@ -202,15 +276,52 @@ main section.gallery-overlay .viewer .controls button {
         padding-left: 0px;
     }
 
+    main section.main_head h1 {
+        margin-left: 0;
+    }
+
     main section.main_head h1 span {
         font-size: 50px;
     }
 
     main section.gallery ul {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: repeat(3, 1fr);
         row-gap: 40px;
+    }
+
+    main section.gallery ul>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    main section.gallery ul>*:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+
+    main section.gallery ul>*:nth-child(3) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    main section.gallery ul>*:nth-child(4) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
+    }
+
+    main section.gallery ul>*:nth-child(5) {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    main section.gallery ul>*:nth-child(6) {
+        -ms-grid-row: 5;
+        -ms-grid-column: 2;
     }
 
     main section.gallery ul li::after {
@@ -229,6 +340,8 @@ main section.gallery-overlay .viewer .controls button {
     }
 
     main section.gallery .photos {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
         column-count: 1;
     }
 
