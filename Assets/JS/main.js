@@ -1,11 +1,3 @@
-// function load_content() {
-//     const header = document.getElementById("header").content.cloneNode(true);
-//     const footer = document.getElementById("footer").content.cloneNode(true);
-
-//     document.querySelector("header").appendChild(header);
-//     document.querySelector("footer").appendChild(footer);
-// }
-// load_content();
 
 
 // to expand nav menu
@@ -21,21 +13,48 @@ class ImageGallery {
         this.images = image_array;
         this.container = document.querySelector(container_selector);
         this.overlay = document.querySelector(overlay_selector);
+
+        this.finish_loading = false;
     }
 
     load() {
 
-        for (let info of this.images) {
+        // var column_count = getComputedStyle(this.container).columnCount;
+        var column_count = 4;
+
+        var columns = [];
+        for (let i = 0; i < column_count; i++) {
+            let column = document.createElement("div");
+            column.classList.add("column");
+            this.container.appendChild(column);
+
+            columns.push(column);
+        }
+
+        for (let index in this.images) {
+
+            let info = this.images[index];
+
             const wrapper = document.createElement("div");
-            wrapper.className = "photo_item";
+            wrapper.classList.add("photo_item", "not-loaded");
             wrapper.dataset.category = info.category;
 
             const img = document.createElement("img");
             img.src = info.url;
             img.alt = info.alt;
+            img.loading = "lazy";
+
+
+
 
             wrapper.appendChild(img);
-            this.container.appendChild(wrapper);
+            columns[index % column_count].appendChild(wrapper);
+            // this.container.appendChild(wrapper);
+
+            img.addEventListener("load", () => {
+                wrapper.classList.remove("not-loaded");
+                wrapper.style.height = img.height;
+            })
 
             img.addEventListener("click", () => {
                 this.open_overlay(img.src, img.alt);
@@ -44,8 +63,16 @@ class ImageGallery {
 
     }
 
+
     open_overlay(src, alt) {
+
+        if (window.innerWidth <= 767) {
+            return;
+            //to not apply this feature for mobiles
+        }
         const viewerImage = this.overlay.querySelector(".viewer img");
+        viewerImage.src = "";
+
         viewerImage.src = src;
         viewerImage.alt = alt;
 
@@ -56,27 +83,31 @@ class ImageGallery {
         }
     }
 
-    filter_by(category) {
+    async filter_by(category) {
         const items = document.querySelectorAll(".photo_item");
 
         for (let item of items) {
-            if (category === "All" || item.dataset.category === category) {
-                item.style.display = "block";
-                setTimeout(function () {
-                    item.style.opacity = 1;
-                    item.style.transform = "scale(1)";
-                }, 0);
-            }
-            else {
-                item.style.opacity = 0;
-                item.style.transform = "scale(0.7)";
 
-                setTimeout(function () {
-                    item.style.display = "none";
-                })
-
-            }
-
+            item.style.display = (category === "All" || item.dataset.category === category) ? "block" : "none";
         }
     }
 }
+
+
+
+//loading animation
+async function load_animation(time) {
+    let loading_page = `<div class="loading-page">
+        <div class="growing-spinner"></div>
+    </div>`;
+
+    document.body.innerHTML += loading_page;
+
+    document.body.style.overflow = "hidden";
+
+    await new Promise(r => setTimeout(r, time));
+    document.body.style.overflow = "visible";
+
+    document.querySelector(".loading-page").style.display = "none";
+}
+

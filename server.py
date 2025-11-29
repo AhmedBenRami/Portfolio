@@ -1,5 +1,6 @@
-from livereload import Server, shell
 import os
+
+from livereload import Server
 
 # Path of your project ('.' = current directory)
 project_path = "."

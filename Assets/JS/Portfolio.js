@@ -1,109 +1,111 @@
 let image_array = [
     {
-        "url": "../Assets/Images/Portfolio/jeff-w-cf9RPUGIho8-unsplash.jpg",
-        "alt": "Portfolio image: jeff-w-cf9RPUGIho8-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img0.jpg",
+        "alt": "Rose",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/flash-dantz-nwoMIuSyGl0-unsplash.jpg",
-        "alt": "Portfolio image: flash-dantz-nwoMIuSyGl0-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img1.jpg",
+        "alt": "morning though tree",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/carlos-rodriguez-b0GbrDtWFSs-unsplash.jpg",
-        "alt": "Portfolio image: carlos-rodriguez-b0GbrDtWFSs-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img2.jpg",
+        "alt": "beach",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/pexels-filiamariss-9417212.jpg",
-        "alt": "Portfolio image: pexels-filiamariss-9417212.jpg",
+        "url": "../Assets/Images/Portfolio/img3.jpg",
+        "alt": "Reading news",
         "category": "Photo session"
     },
     {
-        "url": "../Assets/Images/Portfolio/william-krause-0zERrbey8XM-unsplash.jpg",
-        "alt": "Portfolio image: william-krause-0zERrbey8XM-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img4.jpg",
+        "alt": "chandelier",
         "category": "Architecture"
     },
     {
-        "url": "../Assets/Images/Portfolio/mary-anne-twimbers-sO7EEM3GO0w-unsplash.jpg",
-        "alt": "Portfolio image: mary-anne-twimbers-sO7EEM3GO0w-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img5.jpg",
+        "alt": "bird",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/jesus-eca-c5E6rpftvl4-unsplash.jpg",
-        "alt": "Portfolio image: jesus-eca-c5E6rpftvl4-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img6.jpg",
+        "alt": "watch",
         "category": "Product"
     },
     {
-        "url": "../Assets/Images/Portfolio/pexels-nemanja-vucic-2157177226-34592502.jpg",
-        "alt": "Portfolio image: pexels-nemanja-vucic-2157177226-34592502.jpg",
+        "url": "../Assets/Images/Portfolio/img7.jpg",
+        "alt": "house in nature",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/ela-de-pure-2Sb9AlbC9cI-unsplash.jpg",
-        "alt": "Portfolio image: ela-de-pure-2Sb9AlbC9cI-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img8.jpg",
+        "alt": "shampoo",
         "category": "Product"
     },
     {
-        "url": "../Assets/Images/Portfolio/pexels-oleksandr-plakhota-1270583835-34607826.jpg",
-        "alt": "Portfolio image: pexels-oleksandr-plakhota-1270583835-34607826.jpg",
+        "url": "../Assets/Images/Portfolio/img9.jpg",
+        "alt": "buildings",
         "category": "Architecture"
     },
     {
-        "url": "../Assets/Images/Portfolio/pexels-miken-34533233.jpg",
-        "alt": "Portfolio image: pexels-miken-34533233.jpg",
+        "url": "../Assets/Images/Portfolio/img10.jpg",
+        "alt": "store",
         "category": "Architecture"
     },
     {
-        "url": "../Assets/Images/Portfolio/seungcheol-baek-4WZSlCvk8DE-unsplash.jpg",
-        "alt": "Portfolio image: seungcheol-baek-4WZSlCvk8DE-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img11.jpg",
+        "alt": "garden",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/possumvii-iviiss-BkrmRzcB0pU-unsplash.jpg",
-        "alt": "Portfolio image: possumvii-iviiss-BkrmRzcB0pU-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img12.jpg",
+        "alt": "horse",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/artem-ivanov-6sx7VjBN7q8-unsplash.jpg",
-        "alt": "Portfolio image: artem-ivanov-6sx7VjBN7q8-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img13.jpg",
+        "alt": "winter",
         "category": "Nature"
     },
     {
-        "url": "../Assets/Images/Portfolio/piotr-RKmMIr63kTE-unsplash.jpg",
-        "alt": "Portfolio image: piotr-RKmMIr63kTE-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img14.jpg",
+        "alt": "roman building",
         "category": "Architecture"
     },
     {
-        "url": "../Assets/Images/Portfolio/laura-chouette-IpHxKyATsvk-unsplash.jpg",
-        "alt": "Portfolio image: laura-chouette-IpHxKyATsvk-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img15.jpg",
+        "alt": "book",
         "category": "Product"
     },
     {
-        "url": "../Assets/Images/Portfolio/Mads Mikkelsen was born with these glasses on btw.jpeg",
-        "alt": "Portfolio image: Mads Mikkelsen was born with these glasses on btw.jpeg",
+        "url": "../Assets/Images/Portfolio/img16.webp",
+        "alt": "Mads Mikkelsen",
         "category": "Photo session"
     },
     {
-        "url": "../Assets/Images/Portfolio/chouaib-maiza-OARqrr4QCX8-unsplash.jpg",
-        "alt": "Portfolio image: chouaib-maiza-OARqrr4QCX8-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img17.jpg",
+        "alt": "prtrait in nature",
         "category": "Photo session"
     },
     {
-        "url": "../Assets/Images/Portfolio/bora-sozuer-dGYIWKq7rxg-unsplash.jpg",
-        "alt": "Portfolio image: bora-sozuer-dGYIWKq7rxg-unsplash.jpg",
+        "url": "../Assets/Images/Portfolio/img18.jpg",
+        "alt": "piano",
         "category": "Photo session"
     }
 ];
 
 
+//show load animation
+// load_animation();
 
 let image_galley = new ImageGallery(image_array, "main section.gallery .photos", "main section.gallery-overlay");
 
 image_galley.load();
 
-//gallery nav handling
 
+//gallery nav handling
 const gallery_nav = document.querySelectorAll("main section.gallery ul li");
 
 for (let category of gallery_nav) {
@@ -117,4 +119,5 @@ for (let category of gallery_nav) {
 
     })
 }
+
 
