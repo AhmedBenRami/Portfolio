@@ -15,15 +15,19 @@
     color: black;
 }
 
-a:hover {
-    color: var(--link-orange) !important;
-    font-size: 18px;
-}
 
 html,
 body {
     width: 100%;
     height: 100vh;
+}
+
+html,
+body,
+header,
+main,
+footer {
+    width: 100%;
 }
 
 
@@ -162,12 +166,15 @@ footer {
 
 footer div.infos {
     width: 80%;
-    height: 300px;
+    min-height: 300px;
     margin-left: 80px;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     position: relative;
 }
 
@@ -195,8 +202,8 @@ footer div.infos::after {
 
 
 footer div.infos>div {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 footer .infos div * {
@@ -218,12 +225,6 @@ footer div.infos div h4 {
     margin-bottom: 15px;
 }
 
-
-footer div.infos div.open_hour h4,
-footer div.infos div.social_media h4 {
-    margin-top: 0em;
-}
-
 footer div.infos div h4::before {
     content: "";
     width: 2px;
@@ -237,6 +238,14 @@ footer div.infos div h4::before {
 
 footer .infos div span a {
     color: var(--parag-dark);
+}
+
+footer .infos .social_media .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 footer .infos div.social_media span {
@@ -284,11 +293,12 @@ footer .copyright::before {
 
 /* phone */
 @media (max-width: 767px) {
+
     header {
         justify-content: space-between;
         background-color: var(--main-bg-color);
         padding: 0;
-        width: 95%;
+        width: 100%;
         height: 70px;
         margin: auto;
     }
@@ -339,10 +349,6 @@ footer .copyright::before {
         transition: 0.3s;
         width: 0;
     }
-
-    /* header .hamburger-button svg path:nth-of-type(2) {
-        transition: 3s;
-    } */
 
     header:has(nav.nav-open) .hamburger-button svg path:nth-of-type(3) {
         transform: rotate(-45deg) translate(-12px, 11px);
@@ -409,10 +415,22 @@ footer .copyright::before {
         margin-top: 100px;
     }
 
-    footer .infos {
+    footer div.infos {
         height: 100%;
+        /* flex-direction: column; */
         min-height: fit-content;
-        flex-wrap: nowrap;
+        /* flex-wrap: nowrap; */
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
+        margin-left: 64px;
+
+    }
+
+    footer div.infos::before {
+        top: 0;
+        bottom: 0;
     }
 
     footer .infos::after {
@@ -420,16 +438,17 @@ footer .copyright::before {
     }
 
     footer div.infos .social_media {
-        display: flex;
+
         flex-direction: column;
 
     }
 
     footer div.infos .social_media .wrapper {
-        /* flex-grow: 10; */
-        width: 100%;
         display: flex;
-        flex-direction: row;
+        width: 100%;
+        /* min-height: 300px; */
+        flex-direction: column;
+        row-gap: 10px;
     }
 
     footer div.infos .social_media .wrapper span {

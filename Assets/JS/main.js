@@ -1,11 +1,11 @@
-function load_content() {
-    const header = document.getElementById("header").content.cloneNode(true);
-    const footer = document.getElementById("footer").content.cloneNode(true);
+// function load_content() {
+//     const header = document.getElementById("header").content.cloneNode(true);
+//     const footer = document.getElementById("footer").content.cloneNode(true);
 
-    document.querySelector("header").appendChild(header);
-    document.querySelector("footer").appendChild(footer);
-}
-load_content();
+//     document.querySelector("header").appendChild(header);
+//     document.querySelector("footer").appendChild(footer);
+// }
+// load_content();
 
 
 // to expand nav menu
@@ -28,6 +28,7 @@ class ImageGallery {
         for (let info of this.images) {
             const wrapper = document.createElement("div");
             wrapper.className = "photo_item";
+            wrapper.dataset.category = info.category;
 
             const img = document.createElement("img");
             img.src = info.url;
@@ -36,7 +37,6 @@ class ImageGallery {
             wrapper.appendChild(img);
             this.container.appendChild(wrapper);
 
-            // Enable zooming
             img.addEventListener("click", () => {
                 this.open_overlay(img.src, img.alt);
             });
@@ -53,6 +53,30 @@ class ImageGallery {
 
         this.overlay.querySelector(".viewer .controls button").onclick = () => {
             this.overlay.style.visibility = "hidden";
+        }
+    }
+
+    filter_by(category) {
+        const items = document.querySelectorAll(".photo_item");
+
+        for (let item of items) {
+            if (category === "All" || item.dataset.category === category) {
+                item.style.display = "block";
+                setTimeout(function () {
+                    item.style.opacity = 1;
+                    item.style.transform = "scale(1)";
+                }, 0);
+            }
+            else {
+                item.style.opacity = 0;
+                item.style.transform = "scale(0.7)";
+
+                setTimeout(function () {
+                    item.style.display = "none";
+                })
+
+            }
+
         }
     }
 }
