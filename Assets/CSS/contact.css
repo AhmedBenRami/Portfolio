@@ -1,12 +1,71 @@
+main{
+    padding: 30px;
+}
 .get-in-touch{
+    margin-top: 150px;
+    padding-left: 5vh;
+    padding-right: 12vh;
    display: flex;
    justify-content: space-between;
 }
+.get-in-touch h4{
+     color: var(--parag-dark);
+       font-weight: 300;
+}
+.get-in-touch a{
+    color: var(--parag-dark);
+       font-weight: 300;
+}
+.get-in-touch p{
+    font-size: x-large;
+    font-weight: normal;
+    color: var(--title-dark);
+}
 .info1{
+    
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 .info1 div{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 110px;
+}
+.get{
+    font-size: 90px;
+    font-weight: 300;
+    font-family: "Barlow Condensed";
+}
+.gp{
+    font-family: "Barlow Condensed";
+    color: var(--parag-dark);
+}
+.line{
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 100%;
+    height: 0.1px;
+    background-color: #dcdcdc41;
+}
+.contact h1{
+    margin-bottom: 60px;
+}
+input{
+    background-color: var(--main-bg-color);
+    border: solid 0.1px #dcdcdc41 ;
+    padding: 10px;
+}
+input::placeholder{
+    font-size: medium;
+    font-weight: 300;
+}
+.name{
+    width: 100%;
+}
+.phone{
+    width: 50%;
+}
+.e-mail{
+    width: 50%;
 }

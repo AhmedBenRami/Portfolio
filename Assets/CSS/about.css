@@ -147,7 +147,7 @@ h2 .gp{
     text-align: center;
 }
 .state{
-    color: #f26b2b;
+    color: var(--link-orange);
     font-size: 150px;
     font-family: 'Arial Narrow Bold', sans-serif;
     font-weight: 150;
@@ -205,13 +205,22 @@ h2 .gp{
 
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     text-align: center;
     padding: 20px;
     margin-bottom:50px ;
 }
+.small-Contact img{
+  
+    width: 40px;
+    height: 40px;
+}
 
 .contact-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 15%;
     text-decoration: none;
@@ -251,8 +260,5 @@ h2 .gp{
     background-position: 20vh;
 
 }
-
-
-
 
 
