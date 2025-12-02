@@ -1,2 +1,2 @@
 # Portfolio
-VIsit at https://ahmedbenrami.github.io/Portfolio/
+Visit at https://ahmedbenrami.github.io/Portfolio/
