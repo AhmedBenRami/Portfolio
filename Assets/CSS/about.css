@@ -146,11 +146,11 @@ h2 .gp{
 .achievements p{
     text-align: center;
 }
-.state{
+.state1{
     color: var(--link-orange);
     font-size: 150px;
-    font-family: 'Arial Narrow Bold', sans-serif;
-    font-weight: 150;
+    font-family: "Barlow Condensed";
+    font-weight: 300;
     position: relative;
 }
 .state1::before{
@@ -178,13 +178,6 @@ h2 .gp{
     color: var(--parag-dark);
     font-size: 40px;
     font-family: "Barlow Condensed";
-}
-.state1{
-    color: var(--link-orange);
-    font-size: 150px;
-    font-family: 'Arial Narrow Bold', sans-serif;
-    font-weight: 150;
-    position: relative;
 }
 .ln{
     width: 100%;
@@ -260,5 +253,95 @@ h2 .gp{
     background-position: 20vh;
 
 }
+.main_page{
+    color: var(--link-orange);
+}
+@media (max-width: 768px) {
 
+    /* General spacing */
+    main {
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    /* ------------ HERO SECTION ------------ */
+    .introduction {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hi {
+        width: 100%;
+        font-size: 45px;
+        height: auto;
+    }
+
+    .pic1, 
+    .pic2 {
+        width: 90%;
+        margin: 0;
+        position: static;
+    }
+
+    .logo2 {
+        
+        margin: 20px auto;
+    }
+
+    /* ------------ ABOUT ME SECTION ------------ */
+    .about_me {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .pr1, .pr2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .pr2::before {
+        display: none; /* remove vertical line on mobile */
+    }
+
+    .pr1 h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* ------------ ACHIEVEMENTS BOXES ------------ */
+    .achievements {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .ash1, .ash2, .ash3 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* State number */
+    .state {
+        font-size: 80px;
+    }
+}
+@media (max-width: 767px) {
+
+    .hi {
+        font-size: 35px;
+    }
+
+    .pr1 h2 {
+        font-size: 26px;
+    }
+
+    .achievements2 p {
+        font-size: large;
+    }
+
+    .state {
+        font-size: 60px;
+    }
+}
 

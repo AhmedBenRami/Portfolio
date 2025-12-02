@@ -52,9 +52,11 @@ main{
     margin-bottom: 60px;
 }
 input{
+    margin-bottom: 10px;
     background-color: var(--main-bg-color);
     border: solid 0.1px #dcdcdc41 ;
     padding: 10px;
+    border-radius: 10px;
 }
 input::placeholder{
     font-size: medium;
@@ -67,5 +69,72 @@ input::placeholder{
     width: 50%;
 }
 .e-mail{
-    width: 50%;
+    margin-left: 6px;
+    width: 49%;
+}
+.text{
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    border: solid 0.1px #dcdcdc41 ;
+    height: 20vh;
+}
+.text:focus{
+    border: solid 0.1px #dcdcdc41 ;
+
+}
+.text::placeholder{
+     font-size: medium;
+    font-weight: 300;
+}
+
+.message{
+    text-align: center;
+    padding: 2%;
+    background-color: var(--link-orange);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+.message:hover{
+    background-color: #ff5100;
+}
+iframe{
+    height: 100vh;
+}
+
+@media (max-width: 767px) {
+    .get-in-touch {
+        flex-direction: column;
+        
+        gap: 40px;
+       
+    }
+
+    .get {
+        font-size: 55px;
+        line-height: 1.1;
+    }
+
+    .info1 div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+
+
+    .phone,.e-mail {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    form input,textarea {
+        width: 100% ;
+    }
+
+    .message {
+        padding: 15px;
+    }
 }
