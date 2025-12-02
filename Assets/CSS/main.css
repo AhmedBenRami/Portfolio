@@ -205,23 +205,17 @@ h1.has_bar::before {
     height: 1px;
     position: absolute;
     left: 30px;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(30%, var(--link-orange)),
-        color-stop(30%, var(--parag-dark))
-    );
-    background-image: -o-linear-gradient(
-        left,
-        var(--link-orange) 30%,
-        var(--parag-dark) 30%
-    );
-    background-image: linear-gradient(
-        90deg,
-        var(--link-orange) 30%,
-        var(--parag-dark) 30%
-    );
+    background-image: -webkit-gradient(linear,
+            left top,
+            right top,
+            color-stop(30%, var(--link-orange)),
+            color-stop(30%, var(--parag-dark)));
+    background-image: -o-linear-gradient(left,
+            var(--link-orange) 30%,
+            var(--parag-dark) 30%);
+    background-image: linear-gradient(90deg,
+            var(--link-orange) 30%,
+            var(--parag-dark) 30%);
 }
 
 footer {
@@ -246,22 +240,22 @@ footer div.infos {
     position: relative;
 }
 
-footer div.infos > *:nth-child(1) {
+footer div.infos>*:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
 }
 
-footer div.infos > *:nth-child(2) {
+footer div.infos>*:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
 }
 
-footer div.infos > *:nth-child(3) {
+footer div.infos>*:nth-child(3) {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
 }
 
-footer div.infos > *:nth-child(4) {
+footer div.infos>*:nth-child(4) {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
 }
@@ -288,7 +282,7 @@ footer div.infos::after {
     left: calc(50% + var(--left));
 }
 
-footer div.infos > div {
+footer div.infos>div {
     width: 100%;
     height: 100%;
 }
@@ -397,6 +391,9 @@ footer .copyright::before {
         width: 100%;
         height: 70px;
         margin: auto;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     header .logo {
@@ -491,7 +488,7 @@ footer .copyright::before {
         transition: 0.3s;
     }
 
-    header nav.nav-open ~ .nav-overlay {
+    header nav.nav-open~.nav-overlay {
         visibility: visible;
         opacity: 1;
     }
@@ -546,22 +543,22 @@ footer .copyright::before {
         margin-left: 64px;
     }
 
-    footer div.infos > *:nth-child(1) {
+    footer div.infos>*:nth-child(1) {
         -ms-grid-row: 1;
         -ms-grid-column: 1;
     }
 
-    footer div.infos > *:nth-child(2) {
+    footer div.infos>*:nth-child(2) {
         -ms-grid-row: 2;
         -ms-grid-column: 1;
     }
 
-    footer div.infos > *:nth-child(3) {
+    footer div.infos>*:nth-child(3) {
         -ms-grid-row: 3;
         -ms-grid-column: 1;
     }
 
-    footer div.infos > *:nth-child(4) {
+    footer div.infos>*:nth-child(4) {
         -ms-grid-row: 4;
         -ms-grid-column: 1;
     }
