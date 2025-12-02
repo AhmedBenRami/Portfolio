@@ -258,13 +258,12 @@ h2 .gp{
 }
 @media (max-width: 768px) {
 
-    /* General spacing */
     main {
         margin-top: 120px;
         padding: 20px;
     }
 
-    /* ------------ HERO SECTION ------------ */
+ 
     .introduction {
         flex-direction: column;
         align-items: center;
@@ -290,7 +289,6 @@ h2 .gp{
         margin: 20px auto;
     }
 
-    /* ------------ ABOUT ME SECTION ------------ */
     .about_me {
         flex-direction: column;
         gap: 30px;
@@ -302,7 +300,7 @@ h2 .gp{
     }
 
     .pr2::before {
-        display: none; /* remove vertical line on mobile */
+        display: none; 
     }
 
     .pr1 h2 {
@@ -310,7 +308,6 @@ h2 .gp{
         text-align: center;
     }
 
-    /* ------------ ACHIEVEMENTS BOXES ------------ */
     .achievements {
         flex-direction: column;
         gap: 25px;
@@ -321,7 +318,6 @@ h2 .gp{
         height: auto;
     }
 
-    /* State number */
     .state {
         font-size: 80px;
     }
