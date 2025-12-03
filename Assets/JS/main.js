@@ -1,113 +1,82 @@
+//load header and footer
+function load_extremums(index_path, logo_path, pages_path) {
+
+    const header = `
+        <div class="logo">
+            <a href="${index_path}">
+                <img src="${logo_path}" alt="Logo" draggable="false">
+            </a>
+        </div>
+        <div class="hamburger-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                <path d="M4 18L20 18" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 12L20 12" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 6L20 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="${pages_path}/portfolio.html">Portfolio</a></li>
+                <li><a href="${pages_path}/offer.html">Offer</a></li>
+                <li><a href="${pages_path}/about.html">About</a></li>
+                <li><a href="${pages_path}/blog.html">Blog</a></li>
+                <li><a href="${pages_path}/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-overlay"></div>
+    `;
+
+    const footer = `
+        <div class="infos">
+            <div class="phone">
+                <h4>Phone number</h4>
+                <span class="number"><a href="tel:+610383766284">+61 (0) 383 766 284</a></span><br>
+                <span class="email"><a href="mailto:noreply@envato.com">noreply@envato.com</a></span>
+            </div>
+
+            <div class="open_hour">
+                <h4>Opening Hours</h4>
+                <p>
+                    Monday - Friday:<br>
+                    06:00 AM - 10:00 PM
+                </p>
+            </div>
+
+            <div class="address">
+                <h4>Address</h4>
+                <p>
+                    Level 13, 2 Elizabeth St,<br>
+                    Melbourne, Victoria 3000, Australia
+                </p>
+            </div>
+
+            <div class="social_media">
+                <h4>Social Media</h4>
+                <div class="wrapper">
+                    <span class="facebook"><a href="#">Facebook</a></span>
+                    <span class="instagram"><a href="#">Instagram</a></span>
+                    <span class="pinterest"><a href="#">Pinterest</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Portfolio By Ahmed, Amin and Adam <br> All Rights Reserved</p>
+        </div>
+    `;
+
+    document.querySelector("header").innerHTML = header;
+    document.querySelector("footer").innerHTML = footer;
+}
 
 
 // to expand nav menu
-document.querySelector(".hamburger-button").addEventListener("click", (e) => {
-    const navigation_bar = document.querySelector("nav");
+window.addEventListener("load", () => {
+    document.querySelector(".hamburger-button").addEventListener("click", (e) => {
+        const navigation_bar = document.querySelector("nav");
 
-    navigation_bar.className = (navigation_bar.className == "") ? "nav-open" : "";
-});
-
-//class for images
-class ImageGallery {
-    constructor(image_array, container_selector, overlay_selector) {
-        this.images = image_array;
-        this.container = document.querySelector(container_selector);
-        this.overlay = document.querySelector(overlay_selector);
-
-        this.finish_loading = false;
-    }
-
-    load() {
-
-        // var column_count = getComputedStyle(this.container).columnCount;
-        var column_count = 4;
-
-        var columns = [];
-        for (let i = 0; i < column_count; i++) {
-            let column = document.createElement("div");
-            column.classList.add("column");
-            this.container.appendChild(column);
-
-            columns.push(column);
-        }
-
-        for (let index in this.images) {
-
-            let info = this.images[index];
-
-            const wrapper = document.createElement("div");
-            wrapper.classList.add("photo_item", "not-loaded");
-            wrapper.dataset.category = info.category;
-
-            const img = document.createElement("img");
-            img.src = info.url;
-            img.alt = info.alt;
-            img.loading = "lazy";
-
-
-
-
-            wrapper.appendChild(img);
-            columns[index % column_count].appendChild(wrapper);
-            // this.container.appendChild(wrapper);
-
-            img.addEventListener("load", () => {
-                wrapper.classList.remove("not-loaded");
-                wrapper.style.height = img.height;
-            })
-
-            img.addEventListener("click", () => {
-                this.open_overlay(img.src, img.alt);
-            });
-        }
-
-    }
-
-
-    open_overlay(src, alt) {
-
-        if (window.innerWidth <= 767) {
-            return;
-            //to not apply this feature for mobiles
-        }
-        const viewerImage = this.overlay.querySelector(".viewer img");
-        viewerImage.src = "";
-
-        viewerImage.src = src;
-        viewerImage.alt = alt;
-
-        this.overlay.style.visibility = "visible";
-
-        this.overlay.querySelector(".viewer .controls button").onclick = () => {
-            this.overlay.style.visibility = "hidden";
-        }
-    }
-
-    async filter_by(category) {
-        const items = document.querySelectorAll(".photo_item");
-
-        for (let item of items) {
-
-            item.style.display = (category === "All" || item.dataset.category === category) ? "block" : "none";
-        }
-    }
-}
-
-
-
-//loading animation
-async function load_animation(time) {
-    let loading_page = `<div class="loading-page">
-        <div class="growing-spinner"></div>
-    </div>`;
-
-    document.body.innerHTML += loading_page;
-
-    document.body.style.overflow = "hidden";
-
-    await new Promise(r => setTimeout(r, time));
-    document.body.style.overflow = "visible";
-
-    document.querySelector(".loading-page").style.display = "none";
-}
+        navigation_bar.className = (navigation_bar.className == "") ? "nav-open" : "";
+    });
+})
 
