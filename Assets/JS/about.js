@@ -1,4 +1,4 @@
-let span1 = document.getElementById("sts1")
+    let span1 = document.getElementById("sts1")
         let span2 = document.getElementById("sts2")
         let span3 = document.getElementById("sts3")
 
@@ -12,7 +12,7 @@ let span1 = document.getElementById("sts1")
                     clearInterval(end)
                 }
 
-            }, 30)
+            }, 50)
 
         }
 
