@@ -16,6 +16,7 @@
 
 <body>
 
+<<<<<<< HEAD
     <header>
         <div class="logo"></div>
         <nav>
@@ -28,6 +29,9 @@
             </ul>
         </nav>
     </header>
+=======
+    <header></header>
+>>>>>>> main
     <main>
         <section class="get-in-touch">
             <h1 class="get"><span class="gp">GET IN</span><br>TOUCH</h1>
@@ -78,13 +82,49 @@
                 <button type="submit" class="message" href="#">Send message</button>
             </form>
         </section>
+<<<<<<< HEAD
         <iframe width="100%" height="250" style="border:0" loading="lazy" allowfullscreen 
             src="https://www.google.com/maps/embed?...">
         </iframe>
+=======
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d849.1043459214393!2d-8.0160863!3d31.6497988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafec279d15ea39%3A0x2a69f3e213f3c209!2sD%C3%A9partement%20Informatique%20-%20FSSM!5e0!3m2!1sen!2sma!4v1764783290694!5m2!1sen!2sma"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <!--========== here is the error message in span with its style=============-->
+        <style>
+            .error-msg {
+                /* position: absolute; */
+                width: 60%;
+                min-width: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: auto;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 7px;
+                padding: 20px 0;
+                font-family: "Barlow Condensed";
+                font-size: x-large;
+            }
+
+            .error-msg img {
+                width: 20px;
+                margin-right: 5px;
+                transform: translateY(2px);
+            }
+        </style>
+        <div class="error-msg" style="display: none;"><img src="../Assets/Icons/error_logo.svg" alt="" srcset="">No
+            Internet Connection To Load The Map</div>
+        <!-- ================================================================================ -->
+>>>>>>> main
 
 
 
     </main>
+<<<<<<< HEAD
     <footer>
         <div class="infos">
 
@@ -122,6 +162,25 @@
             <p>&copy; 2025 Portfolio By A************* <span>(TOP SECRET INFOS)</span> | All Rights Reserved</p>
         </div>
     </footer>
+=======
+    <footer></footer>
+
+    <script src="../Assets/JS/main.js"></script>
+
+    <script>
+        load_extremums("../index.html", "../Assets/Icons/logo.svg", "../Pages")
+    </script>
+
+    <script>
+        var iframe = document.querySelector("iframe");
+        if (!window.navigator.onLine) {
+            let error_msg = document.querySelector("div.error-msg");
+            error_msg.style.display = "block";
+            iframe.style.display = "none";
+
+        }
+    </script>
+>>>>>>> main
 
 </body>
 

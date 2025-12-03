@@ -12,22 +12,12 @@
     <title>About</title>
     <link rel="stylesheet" href="../Assets/CSS/about.css">
     <link rel="stylesheet" href="../Assets/CSS/main.css">
+    <link rel="stylesheet" href="../Assets/CSS/video_style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo"></div>
-        <nav>
-            <ul>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Offer</a></li>
-                <li class="main_page"><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
     <main>
         <!-- I cut this page into five different parts: first, an 
          introduction with photos and everything second about me, a
@@ -38,11 +28,9 @@
             <div class="line"></div>
             <div class="introduction">
                 <h1 class="hi">HI, I'M <br><span class="name"> THOMAS JONES</span></h1>
-                <img src="../Assets/Images/Portfolio/photographer.png" class="pic1">
-                <img src="../Assets/Images/Portfolio/photographer2.png" class="pic2">
-                <div class="logo2">
-                    <img src="../Assets/Icons/passion.svg">
-                </div>
+                <img src="../Assets/Images/About/photographer.png" class="pic1">
+                <img src="../Assets/Images/About/photographer2.png" class="pic2">
+                <div class="logo2"></div>
             </div>
 
         </section>
@@ -51,7 +39,7 @@
                 <!-- gp means grey part -->
                 <div class="pr1">
                     <h2>
-                        <span class="gp">PHOTOGRAPHY IS THE ART OF CAPTURING</span> MOMENTS, EMOTIONS, AND STORIES
+                        <sapan class="gp">PHOTOGRAPHY IS THE ART OF CAPTURING</sapan> MOMENTS, EMOTIONS, AND STORIES
                         THROUGH THE LENS OF A CAMERA.
                     </h2>
                     <br><br>
@@ -92,7 +80,9 @@
             <!-- ach refer to achievements -->
             <div class="achievements">
                 <div class="ash1">
-                    <div class="award1"></div>
+                    <div class="award1">
+                        <img src="../Assets/Icons/achievement1.svg">
+                    </div>
                     <p class="aw-name">Best Photo Award</p>
                     <p class="aw-date">2023</p>
 
@@ -114,14 +104,14 @@
         </section>
         <section class="achievements2">
             <div class="goals">
-                <span class="state1" id="sts1">100%</span>
+                <span class="state1">100%</span>
                 <p><span class="gp1">WORK AND</span> ACHIEVEMENT OF GOALS</p>
             </div>
 
             <div class="ln"></div>
 
             <div class="products">
-                <span class="state1" id="sts2">21</span>
+                <span class="state1">21</span>
                 <p><span class="gp1">AWARDS FOR</span> INNOVATIVE PRODUCTS</p>
             </div>
 
@@ -129,64 +119,65 @@
 
             <div class="orders">
 
-                <span class="state1" id="sts3">37</span>
+                <span class="state1">37</span>
                 <p><span class="gp1">COMPLETED</span> ORDERS</p>
 
             </div>
 
             <div class="ln"></div>
-            <script src="../Assets/JS/about.js"></script>
         </section>
-        <section>
-            <div class="small-Contact">
-                <a class="contact-link" href="#">Contact me <img src="../Assets/Icons/arrow-right.svg" alt=""> </a>
+        <section class="small-Contact">
 
-            </div>
+            <a class="contact-link" href="#">Contact me </a>
+
         </section>
         <section class="showcase">
-            <div class="fix-back"></div>
+            <div class="video-container">
+                <div class="video-pack">
+                    <div class="video-overlay">
+
+                    </div>
+                    <video
+                        src="../Assets/Video/Winter landscape photography, enjoying nature, Im chasing winter landscape shot. ASMR (720 X 1280).mp4"
+                        class="main-video"></video>
+                    <div class="track-base">
+                        <div class="track-active"></div>
+                        <div class="thumb" draggable="true"></div>
+                    </div>
+                    <div class="controls">
+                        <div class="left">
+                            <button class="pause">
+                                <img src="../Assets/Icons/play.svg">
+                            </button>
+                            <div class="sound-level">
+                                <img src="../Assets/Icons/volume-down.svg">
+
+                                <div class="sound-base">
+                                    <div class="sound-active"></div>
+                                    <div class="sound-thumb"></div>
+                                </div>
+                            </div>
+                            <div class="time">0:20/3:10</div>
+                        </div>
+                        <div class="right">
+                            <button class="full-screen">
+                                <img src="../Assets/Icons/enter-fullscreen.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
-    <footer>
-        <div class="infos">
+    <footer></footer>
 
-            <div class="phone">
-                <h4>Phone number</h4>
-                <span class="number"><a href="tel:+610383766284">+61 (0) 383 766 284</a></span><br>
-                <span class="email"><a href="mailto:noreply@envato.com">noreply@envato.com</a></span>
-            </div>
-
-            <div class="open_hour">
-                <h4>Opening Hours</h4>
-                <p>
-                    Monday - Friday:<br>
-                    06:00 AM - 10:00 PM
-                </p>
-            </div>
-
-            <div class="address">
-                <h4>Address</h4>
-                <p>
-                    Level 13, 2 Elizabeth St,<br>
-                    Melbourne, Victoria 3000, Australia
-                </p>
-            </div>
-
-            <div class="social_media">
-                <h4>Social Media</h4>
-                <span class="facebook"><a href="#">Facebook</a></span>
-                <span class="instagram"><a href="#">Instagram</a></span>
-                <span class="pinterest"><a href="#">Pinterest</a></span>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p>&copy; 2025 Portfolio By A************* <span>(TOP SECRET INFOS)</span> | All Rights Reserved</p>
-        </div>
-    </footer>
-
-
+    <script src="../Assets/JS/Video_settings.js"></script>
+    <script src="../Assets/JS/main.js"></script>
+    <script>
+        load_extremums("../index.html", "../Assets/Icons/logo.svg", "../Pages")
+    </script>
 
 </body>
 

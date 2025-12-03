@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main{
     padding: 30px;
 }
@@ -17,37 +18,93 @@ main{
        font-weight: 300;
 }
 .get-in-touch p{
+=======
+main {
+    padding: 30px;
+}
+
+.get-in-touch {
+    margin-top: 150px;
+    padding-left: 5vh;
+    padding-right: 12vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.get-in-touch h4 {
+    color: var(--parag-dark);
+    font-weight: 300;
+}
+
+.get-in-touch a {
+    color: var(--parag-dark);
+    font-weight: 300;
+}
+
+.get-in-touch a:hover {
+    color: var(--link-orange);
+}
+
+.get-in-touch p {
+>>>>>>> main
     font-size: x-large;
     font-weight: normal;
     color: var(--title-dark);
 }
+<<<<<<< HEAD
 .info1{
     
+=======
+
+.info1 {
+
+>>>>>>> main
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+<<<<<<< HEAD
 .info1 div{
+=======
+
+.info1 div {
+>>>>>>> main
     display: flex;
     justify-content: space-between;
     gap: 110px;
 }
+<<<<<<< HEAD
 .get{
+=======
+
+.get {
+>>>>>>> main
     font-size: 90px;
     font-weight: 300;
     font-family: "Barlow Condensed";
 }
+<<<<<<< HEAD
 .gp{
     font-family: "Barlow Condensed";
     color: var(--parag-dark);
 }
 .line{
+=======
+
+.gp {
+    font-family: "Barlow Condensed";
+    color: var(--parag-dark);
+}
+
+.line {
+>>>>>>> main
     margin-top: 20vh;
     margin-bottom: 20vh;
     width: 100%;
     height: 0.1px;
     background-color: #dcdcdc41;
 }
+<<<<<<< HEAD
 .contact h1{
     margin-bottom: 60px;
 }
@@ -89,6 +146,58 @@ input::placeholder{
 }
 
 .message{
+=======
+
+.contact h1 {
+    margin-bottom: 60px;
+}
+
+input {
+    margin-bottom: 10px;
+    background-color: var(--main-bg-color);
+    border: solid 0.1px #dcdcdc41;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    font-size: medium;
+    font-weight: 300;
+}
+
+.name {
+    width: 100%;
+}
+
+.phone {
+    width: 50%;
+}
+
+.e-mail {
+    margin-left: 6px;
+    width: 49%;
+}
+
+.text {
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    border: solid 0.1px #dcdcdc41;
+    height: 20vh;
+}
+
+.text:focus {
+    border: solid 0.1px #dcdcdc41;
+
+}
+
+.text::placeholder {
+    font-size: medium;
+    font-weight: 300;
+}
+
+.message {
+>>>>>>> main
     text-align: center;
     padding: 2%;
     background-color: var(--link-orange);
@@ -97,6 +206,7 @@ input::placeholder{
     width: 100%;
     border-radius: 10px;
 }
+<<<<<<< HEAD
 .message:hover{
     background-color: #ff5100;
 }
@@ -112,17 +222,60 @@ iframe{
         flex-direction: column;
         gap: 40px;
     }
+=======
+
+.message:hover {
+    background-color: #ff5100;
+}
+
+iframe {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .get-in-touch {
+        flex-direction: column;
+
+        gap: 40px;
+
+    }
+
+    .get {
+        font-size: 55px;
+        line-height: 1.1;
+    }
+
+>>>>>>> main
     .info1 div {
         flex-direction: column;
         gap: 5px;
     }
+<<<<<<< HEAD
     .phone,.e-mail {
+=======
+
+
+
+
+    .phone,
+    .e-mail {
+>>>>>>> main
         width: 100%;
         margin-left: 0px;
     }
 
+<<<<<<< HEAD
     form input,textarea {
         width: 100% ;
+=======
+    form input,
+    textarea {
+        width: 100%;
+>>>>>>> main
     }
 
     .message {

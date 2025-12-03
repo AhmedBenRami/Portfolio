@@ -155,6 +155,10 @@ header nav ul li a {
 
 header nav ul li a:hover {
     font-size: inherit;
+<<<<<<< HEAD
+=======
+    color: var(--link-orange);
+>>>>>>> main
 }
 
 :root {
@@ -190,10 +194,13 @@ header .nav-overlay {
     display: none;
 }
 
+<<<<<<< HEAD
 main {
     margin-top: 250px;
 }
 
+=======
+>>>>>>> main
 h1 {
     font-family: "Barlow Condensed";
     font-size: 80px;
@@ -321,6 +328,13 @@ footer .infos div span a {
     color: var(--parag-dark);
 }
 
+<<<<<<< HEAD
+=======
+footer .infos div span a:hover {
+    color: var(--link-orange);
+}
+
+>>>>>>> main
 footer .infos .social_media .wrapper {
     width: 100%;
     display: -webkit-box;
@@ -342,6 +356,16 @@ footer .infos div.social_media span {
     margin-right: 10px;
 }
 
+<<<<<<< HEAD
+=======
+footer .infos div.social_media span:hover {
+    background-color: var(--box-bg-color);
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+>>>>>>> main
 footer .copyright {
     width: 100%;
     text-align: center;
@@ -372,7 +396,11 @@ footer .copyright::before {
 }
 
 /* tablet */
+<<<<<<< HEAD
 @media (max-width: 960px) {
+=======
+@media (max-width: 1023px) {
+>>>>>>> main
     header {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;

@@ -1,340 +1,348 @@
-
 main{
     margin-top: 200px;
     padding: 3%;
 }
 .line{
+
     width: 10%;
     height: 1px;
     background-color: var(--parag-dark);
-    position: relative;
-    /* i use posion for the psuedo element */
-    left: 0px;
-    z-index: -5;
-}
-.line::before{
-    content: '';
-    background: var(--link-orange);
-    display: block;
-    width: 15%;
-    height: 1px;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-}
-.introduction{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.hi{
-    color: var( --parag-dark);
-    letter-spacing: 3px;
-    font-weight: 100;
-    width: 50%;
-    height: 100px;
-    font-size: 90px;
-
-}
-
-.pic1{
-    width: 47%;
-}
-.pic2{
-    width: 50%;
-    margin-top: -170px;
-    
-}
-.logo2{
-    width: 300px;
-    position: relative;
-    right: 34%;
-    bottom: 100px; 
-}
-.about_me{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    position: relative;
-    /* i use posion for the psuedo element */
-}
-.pr1{
-    padding-right: 30px;
-    width: 50%;
-    
-}
-.pr1  h2{
-    
-    font-weight: 300;
-    font-size: 42px;
-}
-.pr1 p{
-    font-weight: 300;
-    font-size: large;
-    
-}
-.pr1 h2 {
-    font-family: "Barlow Condensed";
-}
-h2 .gp{
-    font-family: "Barlow Condensed";
-    font-weight: 300;
-    font-size: 42px;
-
-}
-.gp{
-    color: var(--parag-dark);
-    font-size: larger;
-    
-}
-.pr2{
-    width: 50%;
-    padding-top: 20px;
-    color: var(--parag-dark);
-    font-size: large;
-    font-weight:300 ;
-
-
-}
-.pr2::before{
-    content: '';
-    background:var(--parag-dark) ;
-    width: 1px;
-    height: 95%;
-    position: absolute;
-    left: 49%; 
-}
-
-.achievements{
-    margin-top: 150px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.ash1,.ash2,.ash3{
-    transition: 0.5s;
-}
-.achievements :hover{
-       scale: 1.09;
- 
-}
-.ash1 ,.ash2,.ash3{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--box-bg-color) ;
-    width: 30%;
-    height: 250px;
-    padding: 20px;
-}
-.award1{
-    margin-left: 29%;
-    width: 50%;
-    height: 60%;
-    background-image: url(../Icons/achievement1.svg);
-    background-repeat: no-repeat;
-}
-.award2{
-    margin-left: 29%;
-    width: 50%;
-    height: 60%;
-    background-image: url(../Icons/achievement2.svg);
-    background-repeat: no-repeat;
-}
-.award3{
-    margin-left: 29%;
-    width: 50%;
-    height: 60%;
-    background-image: url(../Icons/achievement3.svg);
-    background-repeat: no-repeat;
-}
-.achievements p{
-    text-align: center;
-}
-.state1{
-    color: var(--link-orange);
-    font-size: 150px;
-    font-family: "Barlow Condensed";
-    font-weight: 300;
-    position: relative;
-}
-.state1::before{
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    content: '';
-    width: 100%;
-    height: 80%;
-    background-image: linear-gradient(to bottom,transparent 10%,var(--main-bg-color)60%);
-
-}
-
-.achievements2 p{
-    font-family: "Barlow Condensed";
-    font-size: 40px;
-    font-weight:300 ;
-}
-.achievements2 div{
-    display: flex;
-     justify-content: space-between;
-     position: relative;
-}
-.gp1{
-    color: var(--parag-dark);
-    font-size: 40px;
-    font-family: "Barlow Condensed";
-}
-.ln{
-    width: 100%;
-    height: 0.1px;
-    background-color: rgba(220, 220, 220, 0.253);
-    position: relative;
-    bottom: 70px;
-}
-.achievements2{
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-}
-.small-Contact{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    margin-bottom:50px ;
-}
-.small-Contact img{
-  
-    width: 40px;
-    height: 40px;
-}
-
-.contact-link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-decoration: none;
-    font-family: "Barlow Condensed";
-    font-size: 20px;
-    padding: 18px;
-    border: solid 1px #8080807c;
-    border-radius: 8px ;
-    transition: 0.4s;
-}
-.contact-link::before{
-    content:'';
-    position: absolute;
-    width: 0;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: var(--nav-bg-dark);
-    z-index: -1 ;
-    transition: 0.5s;
-}
-.contact-link:hover::before{
-    width: 100%;
-}
-.contact-link:hover{
-    color: var(--link-orange);
-}
-.showcase{
-    height: 100vh;
-    margin-bottom: 50px;
-}
-.fix-back{
-    width:100%;
-    height:  113vh;
-    background-image: url(../Images/Portfolio/showcase.png);
-    background-attachment: fixed;
-    background-position: 20vh;
-
-}
-.main_page{
-    color: var(--link-orange);
-}
-
-
-
-
-@media (max-width: 768px) {
-
     main {
-        margin-top: 120px;
-        padding: 20px;
+        margin-top: 200px;
+        padding: 3%;
     }
 
- 
+    .line {
+        width: 10%;
+        height: 1px;
+        background-color: var(--parag-dark);
+        position: relative;
+        left: 0px;
+        z-index: -5;
+    }
+
+    .line::before {
+        content: '';
+        background: var(--link-orange);
+        display: block;
+        width: 15%;
+        height: 1px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+    }
+
     .introduction {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .hi {
-        width: 100%;
-        font-size: 45px;
-        height: auto;
+        color: var(--parag-dark);
+        letter-spacing: 3px;
+        font-weight: 100;
+        width: 50%;
+        height: 100px;
+        font-size: 90px;
     }
 
-    .pic1, 
+    .pic1 {
+        width: 47%;
+    }
+
     .pic2 {
-        width: 90%;
-        margin: 0;
-        position: static;
+        width: 50%;
+        margin-top: -170px;
     }
 
     .logo2 {
-       display: none;
+        width: 300px;
+        background-image: url(../Icons/passion.svg);
+        background-repeat: no-repeat;
+        position: relative;
+        right: 34%;
+        bottom: 100px;
     }
 
     .about_me {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .pr1 {
+        padding-right: 30px;
+        width: 50%;
+    }
+
+    .pr1 h2 {
+        font-weight: 300;
+        font-size: 42px;
+        font-family: "Barlow Condensed";
+    }
+
+    .pr1 p {
+        font-weight: 300;
+        font-size: large;
+    }
+
+    h2 .gp {
+        font-family: "Barlow Condensed";
+        font-weight: 300;
+        font-size: 42px;
+    }
+
+    .gp {
+        color: var(--parag-dark);
+        font-size: larger;
+    }
+
+    .pr2 {
+        width: 50%;
+        padding-top: 20px;
+        color: var(--parag-dark);
+        font-size: large;
+        font-weight: 300;
+    }
+
+    .pr2::before {
+        content: '';
+        background: var(--parag-dark);
+        width: 1px;
+        height: 95%;
+        position: absolute;
+        left: 49%;
+    }
+
+    .achievements {
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .ash1,
+    .ash2,
+    .ash3 {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--box-bg-color);
+        width: 30%;
+        height: 250px;
+        padding: 20px;
+        transition: 0.5s;
+    }
+
+    .achievements :hover {
+        scale: 1.09;
+    }
+
+    .award1,
+    .award2,
+    .award3 {
+        margin-left: 33%;
+        width: 40%;
+        height: 60%;
+        background-repeat: no-repeat;
+    }
+
+    .award1 { background-image: url(../Icons/achievement1.svg); }
+    .award2 { background-image: url(../Icons/achievement2.svg); }
+    .award3 { background-image: url(../Icons/achievement3.svg); }
+
+    .achievements p {
+        text-align: center;
+    }
+
+    .state1 {
+        color: var(--link-orange);
+        font-size: 150px;
+        font-family: "Barlow Condensed";
+        font-weight: 300;
+        position: relative;
+    }
+
+    .state1::before {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        content: '';
+        width: 100%;
+        height: 80%;
+        background-image: linear-gradient(to bottom, transparent 10%, var(--main-bg-color) 60%);
+    }
+
+    .achievements2 p {
+        font-family: "Barlow Condensed";
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    .achievements2 div {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .gp1 {
+        color: var(--parag-dark);
+        font-size: 40px;
+        font-family: "Barlow Condensed";
+    }
+
+    .ln {
+        width: 100%;
+        height: 0.1px;
+        background-color: rgba(220, 220, 220, 0.253);
+        position: relative;
+        bottom: 70px;
+    }
+
+    .achievements2 {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
         flex-direction: column;
         gap: 30px;
     }
 
-    .pr1, .pr2 {
+    .small-Contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        padding: 0;
-    }
-
-    .pr2::before {
-        display: none; 
-    }
-
-    .pr1 h2 {
-        font-size: 30px;
         text-align: center;
+        padding: 20px;
+        margin-bottom: 50px;
     }
 
-    .achievements {
-        flex-direction: column;
-        gap: 25px;
+    .small-Contact img {
+        width: 40px;
+        height: 40px;
     }
 
-    .ash1, .ash2, .ash3 {
+    .contact-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 15%;
+        text-decoration: none;
+        font-family: "Barlow Condensed";
+        font-size: 20px;
+        padding: 18px;
+        border: solid 1px #8080807c;
+        border-radius: 8px;
+        transition: 0.4s;
+    }
+
+    .contact-link::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: var(--nav-bg-dark);
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    .contact-link:hover::before { width: 100%; }
+    .contact-link:hover { color: var(--link-orange); }
+
+    .showcase {
+        height: 100vh;
+        margin-bottom: 50px;
+    }
+
+    .fix-back {
         width: 100%;
-        height: auto;
+        height: 113vh;
+        background-image: url(../Images/Portfolio/showcase.png);
+        background-attachment: fixed;
+        background-position: 20vh;
     }
 
-    .state {
-        font-size: 80px;
+    .main_page { color: var(--link-orange); }
+
+    @media (max-width: 768px) {
+        main {
+            margin-top: 120px;
+            padding: 20px;
+        }
+
+        .introduction {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .hi {
+            width: 100%;
+            font-size: 45px;
+            height: auto;
+        }
+
+        .pic1,
+        .pic2 {
+            width: 90%;
+            margin: 0;
+            position: static;
+        }
+
+        .logo2 {
+            margin: 20px auto;
+        }
+
+        .about_me {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .pr1,
+        .pr2 {
+            width: 100%;
+            padding: 0;
+        }
+
+        .pr2::before { display: none; }
+
+        .pr1 h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .achievements {
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .ash1,
+        .ash2,
+        .ash3 {
+            width: 100%;
+            height: auto;
+        }
+
+        .state {
+            font-size: 80px;
+        }
+
+        .achievements2 div {
+            flex-direction: column-reverse;
+        }
     }
-    .achievements2 div{
-        flex-direction: column-reverse;
+
+    @media (max-width: 767px) {
+        .hi { font-size: 35px; }
+        .pr1 h2 { font-size: 26px; }
+        .achievements2 p { font-size: large; }
+        .state { font-size: 60px; }
     }
 }
-@media (max-width: 1024px) {
-
-    
-}
-

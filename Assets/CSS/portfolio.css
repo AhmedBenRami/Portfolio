@@ -1,23 +1,65 @@
+<<<<<<< HEAD
+=======
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+>>>>>>> main
 html,
 body {
     max-width: 100%;
 
 }
 
+<<<<<<< HEAD
+=======
+a:hover {
+    color: var(--link-orange) !important;
+    font-size: 18px;
+}
+
+>>>>>>> main
 header nav ul li.main_page a {
     color: var(--link-orange) !important;
 }
 
 body {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+>>>>>>> main
     align-items: center;
 }
 
 main {
     width: 100%;
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+>>>>>>> main
     align-items: center;
 }
 
@@ -25,7 +67,14 @@ main {
 main section.main_head {
     width: 100%;
     min-height: 20vh;
+<<<<<<< HEAD
     margin-top: calc(90px + 30px * 2);
+=======
+    margin-top: 70px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+>>>>>>> main
 
 }
 
@@ -34,7 +83,11 @@ main section.main_head h1 span {
     font-weight: 300;
     margin-left: 30px;
     text-transform: uppercase;
+<<<<<<< HEAD
     font-size: 50px;
+=======
+    font-size: 90px;
+>>>>>>> main
     margin: auto;
 }
 
@@ -44,16 +97,35 @@ main section.main_head h1 span:first-child {
 
 main section.gallery {
     width: 100%;
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     align-items: center;
 
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    position: relative;
+
+    margin-top: 35px;
+
+>>>>>>> main
 }
 
 main section.gallery ul {
     list-style: none;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +133,22 @@ main section.gallery ul {
     margin-top: 30px;
 }
 
+=======
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+>>>>>>> main
 main section.gallery ul li {
     margin: 0 20px;
     position: relative;
@@ -75,13 +163,19 @@ main section.gallery ul li {
 
 main section.gallery ul li::after {
     content: "";
+<<<<<<< HEAD
     display: none;
     width: calc(100% + var(--nav-adding));
+=======
+    display: block;
+    width: 0;
+>>>>>>> main
     height: 3px;
     background-color: var(--link-orange);
     position: absolute;
     bottom: -16px;
     left: calc(-1 * var(--nav-adding) / 2);
+<<<<<<< HEAD
 }
 
 main section.gallery ul li:hover {
@@ -90,6 +184,21 @@ main section.gallery ul li:hover {
 
 main section.gallery ul li:hover::after {
     display: block;
+=======
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+main section.gallery ul li:hover,
+main section.gallery ul li.active {
+    color: var(--link-orange);
+}
+
+main section.gallery ul li:hover::after,
+main section.gallery ul li.active::after {
+    width: calc(100% + var(--nav-adding));
+>>>>>>> main
 }
 
 main section.gallery .photos {
@@ -97,6 +206,7 @@ main section.gallery .photos {
     max-width: 95%;
     column-count: 4;
     gap: 20px;
+<<<<<<< HEAD
 }
 
 
@@ -110,10 +220,44 @@ main section.gallery .photos .photo_item {
 main section.gallery .photos .photo_item img {
     width: 100%;
     filter: grayscale(100%);
+=======
+    transition: 0.5s;
+}
+
+main section.gallery .photos .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+main section.gallery .photos .photo_item {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+main section.gallery .photos .photo_item.not-loaded {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.253);
+}
+
+
+main section.gallery .photos .photo_item img {
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+>>>>>>> main
     transition: 0.3s;
 }
 
 main section.gallery .photos .photo_item img:hover {
+<<<<<<< HEAD
     filter: grayscale(0%);
     transform: scale(1.05);
 }
@@ -145,11 +289,96 @@ main section.gallery .photos .zoom_img {
 main section.gallery .photos .zoom_img img {
     display: none;
     height: 90vh;
+=======
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+main section.gallery-overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+main section.gallery-overlay .viewer {
+    height: 70vh;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+main section.gallery-overlay .viewer img {
+    max-width: 100%;
+    max-height: 100%;
+    /* border: 1px solid rgba(255, 255, 255, 0.5); */
+    /* border-radius: 6px; */
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+main section.gallery-overlay .viewer .controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    -webkit-transform: translateY(-120%);
+
+    -ms-transform: translateY(-120%);
+
+    transform: translateY(-120%);
+
+}
+
+main section.gallery-overlay .viewer .controls button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: xxx-large;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+>>>>>>> main
 }
 
 /* tablet */
 @media (max-width: 960px) {
     main section.gallery .photos {
+<<<<<<< HEAD
+=======
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+>>>>>>> main
         column-count: 2;
     }
 }
@@ -160,7 +389,107 @@ main section.gallery .photos .zoom_img img {
         max-width: 100vw;
     }
 
+<<<<<<< HEAD
     main section.gallery .photos {
         column-count: 1;
     }
+=======
+    main section.main_head {
+        padding-left: 0px;
+    }
+
+    main section.main_head h1 {
+        margin-left: 0;
+    }
+
+    main section.main_head h1 span {
+        font-size: 50px;
+    }
+
+    main section.gallery ul {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 40px;
+    }
+
+    main section.gallery ul>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    main section.gallery ul>*:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+
+    main section.gallery ul>*:nth-child(3) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    main section.gallery ul>*:nth-child(4) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
+    }
+
+    main section.gallery ul>*:nth-child(5) {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    main section.gallery ul>*:nth-child(6) {
+        -ms-grid-row: 5;
+        -ms-grid-column: 2;
+    }
+
+    main section.gallery ul li::after {
+        width: 80%;
+        left: 0%;
+        background-color: #4b4b4b;
+    }
+
+    main section.gallery ul li:hover::after {
+        width: 80%;
+    }
+
+    main section.gallery ul li.active::after {
+        width: 80%;
+        background-color: var(--link-orange);
+    }
+
+    main section.gallery .photos {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    /* main section.gallery-overlay {
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        visibility: hidden;
+        transition: 0.3s;
+    } */
+
+    /* main section.gallery-overlay .viewer {
+        height: 90vh;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    } */
+
+>>>>>>> main
 }
