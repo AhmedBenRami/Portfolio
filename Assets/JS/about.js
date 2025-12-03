@@ -23,7 +23,7 @@ let span1 = document.getElementById("sts1")
                     clearInterval(end)
                 }
 
-            }, 20)
+            }, 10)
 
         }
 
