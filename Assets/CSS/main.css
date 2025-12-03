@@ -155,6 +155,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     font-size: inherit;
+    color: var(--link-orange);
 }
 
 :root {
@@ -188,10 +189,6 @@ header nav ul li.main_page::before {
 
 header .nav-overlay {
     display: none;
-}
-
-main {
-    margin-top: 250px;
 }
 
 h1 {
@@ -321,6 +318,10 @@ footer .infos div span a {
     color: var(--parag-dark);
 }
 
+footer .infos div span a:hover {
+    color: var(--link-orange);
+}
+
 footer .infos .social_media .wrapper {
     width: 100%;
     display: -webkit-box;
@@ -336,6 +337,13 @@ footer .infos .social_media .wrapper {
 }
 
 footer .infos div.social_media span {
+    background-color: var(--box-bg-color);
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+footer .infos div.social_media span:hover {
     background-color: var(--box-bg-color);
     padding: 10px;
     border-radius: 7px;
