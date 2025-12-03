@@ -107,9 +107,7 @@ iframe{
 @media (max-width: 767px) {
     .get-in-touch {
         flex-direction: column;
-        
         gap: 40px;
-       
     }
 
     .get {
