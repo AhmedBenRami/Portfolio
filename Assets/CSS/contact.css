@@ -105,24 +105,17 @@ iframe{
 }
 
 @media (max-width: 767px) {
+    main{
+        margin-top: 0;
+    }
     .get-in-touch {
         flex-direction: column;
         gap: 40px;
     }
-
-    .get {
-        font-size: 55px;
-        line-height: 1.1;
-    }
-
     .info1 div {
         flex-direction: column;
         gap: 5px;
     }
-
-
-
-
     .phone,.e-mail {
         width: 100%;
         margin-left: 0px;

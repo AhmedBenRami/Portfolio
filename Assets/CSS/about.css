@@ -1,3 +1,4 @@
+
 main{
     margin-top: 200px;
     padding: 3%;
@@ -26,6 +27,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .hi{
     color: var( --parag-dark);
     letter-spacing: 3px;
@@ -46,8 +48,6 @@ main{
 }
 .logo2{
     width: 300px;
-    background-image: url(../Icons/passion.svg);
-    background-repeat: no-repeat;
     position: relative;
     right: 34%;
     bottom: 100px; 
@@ -112,7 +112,13 @@ h2 .gp{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-
+}
+.ash1,.ash2,.ash3{
+    transition: 0.5s;
+}
+.achievements :hover{
+       scale: 1.09;
+ 
 }
 .ash1 ,.ash2,.ash3{
     display: flex;
@@ -123,22 +129,22 @@ h2 .gp{
     padding: 20px;
 }
 .award1{
-    margin-left: 33%;
-    width: 40%;
+    margin-left: 29%;
+    width: 50%;
     height: 60%;
     background-image: url(../Icons/achievement1.svg);
     background-repeat: no-repeat;
 }
 .award2{
-    margin-left: 33%;
-    width: 40%;
+    margin-left: 29%;
+    width: 50%;
     height: 60%;
     background-image: url(../Icons/achievement2.svg);
     background-repeat: no-repeat;
 }
 .award3{
-    margin-left: 33%;
-    width: 40%;
+    margin-left: 29%;
+    width: 50%;
     height: 60%;
     background-image: url(../Icons/achievement3.svg);
     background-repeat: no-repeat;
@@ -215,7 +221,6 @@ h2 .gp{
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 15%;
     text-decoration: none;
     font-family: "Barlow Condensed";
     font-size: 20px;
@@ -256,6 +261,10 @@ h2 .gp{
 .main_page{
     color: var(--link-orange);
 }
+
+
+
+
 @media (max-width: 768px) {
 
     main {
@@ -285,8 +294,7 @@ h2 .gp{
     }
 
     .logo2 {
-        
-        margin: 20px auto;
+       display: none;
     }
 
     .about_me {
@@ -321,23 +329,12 @@ h2 .gp{
     .state {
         font-size: 80px;
     }
+    .achievements2 div{
+        flex-direction: column-reverse;
+    }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
 
-    .hi {
-        font-size: 35px;
-    }
-
-    .pr1 h2 {
-        font-size: 26px;
-    }
-
-    .achievements2 p {
-        font-size: large;
-    }
-
-    .state {
-        font-size: 60px;
-    }
+    
 }
 
