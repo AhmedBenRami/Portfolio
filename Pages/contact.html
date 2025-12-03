@@ -72,6 +72,35 @@
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
+        <!--========== here is the error message in span with its style=============-->
+        <style>
+            .error-msg {
+                /* position: absolute; */
+                width: 60%;
+                min-width: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: auto;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 7px;
+                padding: 20px 0;
+                font-family: "Barlow Condensed";
+                font-size: x-large;
+            }
+
+            .error-msg img {
+                width: 20px;
+                margin-right: 5px;
+                transform: translateY(2px);
+            }
+        </style>
+        <div class="error-msg" style="display: none;"><img src="../Assets/Icons/error_logo.svg" alt="" srcset="">No
+            Internet Connection To Load The Map</div>
+        <!-- ================================================================================ -->
+
+
 
     </main>
     <footer></footer>
@@ -80,6 +109,16 @@
 
     <script>
         load_extremums("../index.html", "../Assets/Icons/logo.svg", "../Pages")
+    </script>
+
+    <script>
+        var iframe = document.querySelector("iframe");
+        if (!window.navigator.onLine) {
+            let error_msg = document.querySelector("div.error-msg");
+            error_msg.style.display = "block";
+            iframe.style.display = "none";
+
+        }
     </script>
 
 </body>
