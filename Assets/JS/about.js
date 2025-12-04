@@ -35,4 +35,4 @@ let span1 = document.getElementById("sts1")
                 observer.disconnect();  // run only once
             }
         });
-        observer.observe(container);
+        observer.observe(span2);
