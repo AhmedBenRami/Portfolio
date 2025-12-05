@@ -1,6 +1,20 @@
+header nav ul li.main_page a {
+    color: var(--link-orange);
+}
+
 main {
     margin-top: 200px;
     padding: 3%;
+}
+
+.hi {
+    font-family: "Barlow Condensed";
+    font-weight: 300;
+}
+
+.hi span.name {
+    font-family: "Barlow Condensed";
+    font-weight: 300;
 }
 
 .line {
@@ -33,7 +47,6 @@ main {
 .hi {
     color: var(--parag-dark);
     letter-spacing: 3px;
-    font-weight: 100;
     width: 50%;
     height: 100px;
     font-size: 90px;
@@ -333,6 +346,8 @@ h2 .gp {
         flex-direction: column;
         gap: 25px;
     }
+
+
 
     .ash1,
     .ash2,

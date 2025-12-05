@@ -97,13 +97,13 @@ video {
 .video-pack .track-base .track-active {
     width: var(--video-value);
     height: 100%;
-    background-color: orange;
+    background-color: var(--link-orange);
 }
 
 .video-pack .track-base .thumb {
     width: 10px;
     height: 10px;
-    background-color: rgb(255, 197, 90);
+    background-color: var(--link-orange);
     border-radius: 100%;
     position: absolute;
     left: var(--video-value);
@@ -179,13 +179,13 @@ video {
 .video-pack .controls .left .sound-base .sound-active {
     width: var(--sound-volume);
     height: 100%;
-    background-color: orange;
+    background-color: var(--link-orange);
 }
 
 .video-pack .controls .left .sound-base .sound-thumb {
     width: 10px;
     height: 10px;
-    background-color: rgb(255, 197, 90);
+    background-color: var(--link-orange);
     border-radius: 100%;
     position: absolute;
     top: -50%;

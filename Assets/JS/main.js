@@ -31,7 +31,7 @@ function load_extremums(index_path, logo_path, pages_path) {
         <div class="infos">
             <div class="phone">
                 <h4>Phone number</h4>
-                <span class="number"><a href="tel:+610383766284">+61 (0) 383 766 284</a></span><br>
+                <span class="number"><a href="tel:+212612345678">+212 (0) 612345678</a></span><br>
                 <span class="email"><a href="mailto:noreply@envato.com">noreply@envato.com</a></span>
             </div>
 
@@ -46,17 +46,17 @@ function load_extremums(index_path, logo_path, pages_path) {
             <div class="address">
                 <h4>Address</h4>
                 <p>
-                    Level 13, 2 Elizabeth St,<br>
-                    Melbourne, Victoria 3000, Australia
+                Abdelkrim Khattabi Avenue,<br>
+                Marrakesh, Marrakesh-Safi, 40000, Morocco
                 </p>
             </div>
 
             <div class="social_media">
                 <h4>Social Media</h4>
                 <div class="wrapper">
-                    <span class="facebook"><a href="#">Facebook</a></span>
-                    <span class="instagram"><a href="#">Instagram</a></span>
-                    <span class="pinterest"><a href="#">Pinterest</a></span>
+                    <span class="facebook"><a href="https://www.facebook.com/">Facebook</a></span>
+                    <span class="instagram"><a href="https://www.instagram.com/">Instagram</a></span>
+                    <span class="pinterest"><a href="https://www.pinterest.com/">Pinterest</a></span>
                 </div>
             </div>
         </div>
@@ -68,6 +68,21 @@ function load_extremums(index_path, logo_path, pages_path) {
 
     document.querySelector("header").innerHTML = header;
     document.querySelector("footer").innerHTML = footer;
+
+    mark_current_page(document.querySelector("header"));
+}
+
+
+function mark_current_page(header) {
+    const currentPageTitle = document.title;
+
+    const navLinks = header.querySelectorAll("nav ul li");
+
+    navLinks.forEach(link => {
+        if (link.textContent.trim() === currentPageTitle.trim()) {
+            link.classList.add("main_page");
+        }
+    });
 }
 
 

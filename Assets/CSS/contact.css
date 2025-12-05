@@ -1,3 +1,7 @@
+header nav ul li.main_page a {
+    color: var(--link-orange);
+}
+
 main {
     padding: 30px;
 }
@@ -125,6 +129,10 @@ input::placeholder {
     background-color: #ff5100;
 }
 .contact{
+    margin-bottom: 30vh;
+}
+
+.contact {
     margin-bottom: 30vh;
 }
 
