@@ -111,7 +111,29 @@ section .im {
   width: 48%;
   height: 95%;
   margin: 10px;
+  border: none;
+}
 
+section .im:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  box-shadow: 0 12px 48px rgba(255, 106, 0, 0.15);
+}
+
+section .im::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(255, 106, 0), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+section .im:hover::before {
+  opacity: 1;
 }
 
 h2 {
@@ -223,7 +245,7 @@ section a:hover::before {
 
 .im:hover {
   background-size: 850px;
-  box-shadow: 0 0 20px rgba(244, 242, 242, 0.5);
+  /* box-shadow: 0 0 20px rgba(244, 242, 242, 0.5); */
 }
 
 .beforefooter {
@@ -421,5 +443,17 @@ section a:hover::before {
 
   footer {
     margin-top: 200px !important;
+  }
+
+
+  section .im:hover {
+    transform: translateY(0px);
+    border: none;
+    box-shadow: none;
+  }
+
+
+  section .im:hover::before {
+    opacity: 0;
   }
 }
