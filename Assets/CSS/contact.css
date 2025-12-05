@@ -98,6 +98,7 @@ input::placeholder {
     background-color: var(--main-bg-color);
     border: solid 0.1px #dcdcdc41;
     height: 20vh;
+    padding: 8px;
 }
 
 .text:focus {
