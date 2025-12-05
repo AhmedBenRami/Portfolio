@@ -306,6 +306,10 @@ section a:hover::before {
   color: rgb(255, 128, 0);
 }
 
+footer {
+  margin-top: 200px !important;
+}
+
 @media (max-width: 767px) {
 
   .event,
@@ -440,6 +444,7 @@ section a:hover::before {
   header nav {
     visibility: hidden;
   }
+
 
   footer {
     margin-top: 200px !important;

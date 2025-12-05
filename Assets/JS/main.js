@@ -68,6 +68,21 @@ function load_extremums(index_path, logo_path, pages_path) {
 
     document.querySelector("header").innerHTML = header;
     document.querySelector("footer").innerHTML = footer;
+
+    mark_current_page(document.querySelector("header"));
+}
+
+
+function mark_current_page(header) {
+    const currentPageTitle = document.title;
+
+    const navLinks = header.querySelectorAll("nav ul li");
+
+    navLinks.forEach(link => {
+        if (link.textContent.trim() === currentPageTitle.trim()) {
+            link.classList.add("main_page");
+        }
+    });
 }
 
 

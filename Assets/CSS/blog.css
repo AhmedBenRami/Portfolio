@@ -16,6 +16,10 @@ body {
   color: #fff;
 }
 
+header nav ul li.main_page a {
+  color: var(--link-orange);
+}
+
 a:hover {
   color: rgb(255, 106, 0);
 }
@@ -209,7 +213,7 @@ main {
 }
 
 .travel .im {
-  background-image: url("../Images/Blog/hindi.webp");
+  background-image: url("../Images/Blog/hindi.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,7 +227,7 @@ main {
 }
 
 .beauti .im {
-  background-image: url("../Images/Blog/titiza.webp");
+  background-image: url("../Images/Blog/buy_in_horizon.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
