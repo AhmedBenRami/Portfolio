@@ -102,8 +102,6 @@ class ImageGallery {
         this.images = image_array;
         this.container = document.querySelector(container_selector);
         this.overlay = document.querySelector(overlay_selector);
-
-        this.finish_loading = false;
     }
 
     load() {
@@ -182,11 +180,6 @@ class ImageGallery {
     }
 }
 
-
-
-
-//show load animation
-// load_animation();
 
 let image_galley = new ImageGallery(image_array, "main section.gallery .photos", "main section.gallery-overlay");
 

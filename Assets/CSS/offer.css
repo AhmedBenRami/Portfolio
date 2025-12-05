@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: rgb(198, 197, 197);
+  color: rgb(66, 66, 66);
+}
+
+body {
+  min-height: 100vh;
+  background-color: #111;
+  font-family: Barlow Condensed;
+}
+
+a:hover {
+  color: rgb(255, 106, 0);
+}
+
+main {
+  margin-top: 100px;
+  position: relative;
+  top: 150px;
+  width: 95%;
+  margin: auto;
+}
+
+.header2 {
+  width: 100%;
+}
+
+
+h1 {
+  max-width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: relative;
+}
+
+h1 span {
+  font-family: "Barlow Condensed";
+  font-weight: 300;
+  font-size: 90px;
+}
+
+h1 span:nth-of-type(1) {
+  color: rgb(255, 255, 255, 0.25);
+  margin-bottom: 10px;
+}
+
+h1.has_bar::before {
+  top: -10px;
+}
+
+h1.has_bar::after {
+  content: "";
+  width: 5ch;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+  background-image: -webkit-gradient(linear,
+      left top,
+      right top,
+      color-stop(30%, var(--link-orange)),
+      color-stop(30%, var(--parag-dark)));
+  background-image: -o-linear-gradient(left,
+      var(--link-orange) 30%,
+      var(--parag-dark) 30%);
+  background-image: linear-gradient(90deg,
+      var(--link-orange) 30%,
+      var(--parag-dark) 30%);
+}
+
+
+section {
+  width: 100%;
+  height: 80vh;
+
+  background-color: #111;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+.event,
+.architecture,
+.tabi3a {
+  display: flex;
+}
+
+.produit,
+.mariag {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+section .kt {
+  width: 52%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+
+}
+
+section .im {
+  width: 48%;
+  height: 95%;
+  margin: 10px;
+
+}
+
+h2 {
+  font-family: "Barlow Condensed";
+  color: white;
+  font-size: 51px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+p {
+  color: rgb(116, 105, 105);
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+
+section a {
+  width: 200px;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+  overflow: hidden;
+  position: relative;
+  top: 50px;
+
+  font-family: 'Barlow Condensed';
+}
+
+section a::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  opacity: 0.3;
+  transition: 0.5s;
+  position: absolute;
+  left: 0px;
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+
+section a:hover::before {
+  width: 100%;
+}
+
+.event .im {
+
+  background-image: url("../Images/Offer/img1.webp");
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 750px;
+  transition: 0.7s;
+  border-radius: 8px;
+}
+
+.produit .im {
+
+  background-image: url("../Images/Offer/produit.webp");
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 750px;
+  transition: 0.7s;
+  border-radius: 8px;
+}
+
+.architecture .im {
+  background-image: url("../Images/Offer/architecture.webp");
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 750px;
+  transition: 0.7s;
+  border-radius: 8px;
+}
+
+.mariag .im {
+  background-image: url("../Images/Offer/mariag.webp");
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 750px;
+  transition: 0.7s;
+  border-radius: 8px;
+}
+
+.tabi3a .im {
+  background-image: url("../Images/Offer/tabi3a.webp");
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 750px;
+  transition: 0.7s;
+  border-radius: 8px;
+}
+
+.im:hover {
+  background-size: 850px;
+  box-shadow: 0 0 20px rgba(244, 242, 242, 0.5);
+}
+
+.beforefooter {
+  display: flex;
+  width: 95%;
+  height: 50vh;
+  margin: auto;
+}
+
+.beforefooter div {
+  width: 50%;
+}
+
+.beforefooter .left {
+  border-left: 1px solid;
+  border-image: linear-gradient(to bottom, #ff6600 0%, #ff6600 20%, white 20%, white 60%, #ff6600 60%, #ff6600 80%, white 80%, white 100%) 1;
+  padding-left: 20px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: #111;
+}
+
+.beforefooter .right {
+  border-left: 1px solid;
+  border-image: linear-gradient(to bottom, #ff6600 0%, #ff6600 20%, white 20%, white 60%, #ff6600 60%, #ff6600 80%, white 80%, white 100%) 1;
+  padding-left: 20px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: #111;
+}
+
+.fo {
+  width: 100%;
+  margin: auto;
+  height: 1px;
+  background-color: aliceblue;
+  margin-top: 10px;
+}
+
+.beforefooter h3 {
+  color: white;
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.beforefooter p {
+  color: rgb(255, 119, 0);
+  font-size: 15px;
+}
+
+.beforefooter a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.beforefooter a:hover {
+  color: rgb(255, 128, 0);
+}
+
+@media (max-width: 767px) {
+
+  .event,
+  .produit,
+  .architecture,
+  .mariag,
+  .tabi3a {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 30px auto;
+    border-top: 5px solid #ff6600;
+  }
+
+  section {
+    flex-direction: column !important;
+    max-width: 90%;
+  }
+
+  .im:hover {
+    background-size: 850px;
+    box-shadow: none;
+  }
+
+  .im:active {
+    background-size: 850px;
+    box-shadow: 0 0 20px rgba(244, 242, 242, 0.5);
+  }
+
+  section .kt {
+    width: 90%;
+  }
+
+  h2 {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  p {
+    color: rgb(116, 105, 105);
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 5px;
+
+  }
+
+  section a {
+    width: 130px;
+    border: 1px solid rgb(255, 255, 255, 0.25);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+    position: relative;
+    top: 2px;
+    font-family: "Barlow Condensed";
+
+  }
+
+  .event .im {
+    width: 90%;
+    background-size: 100%;
+  }
+
+  .produit .im {
+    width: 90%;
+    background-size: 100%;
+  }
+
+  .architecture .im {
+    width: 90%;
+    background-size: 100%;
+  }
+
+  .mariag .im {
+    width: 90%;
+    background-size: 100%;
+  }
+
+  .tabi3a .im {
+    width: 90%;
+    background-size: 100%;
+  }
+
+  .im section {
+    background-color: #111;
+    border-radius: 8px;
+    border-top: 2px solid rgb(255, 119, 0);
+    height: fit-content;
+  }
+
+  .h1 {
+    color: rgb(255, 255, 255, 0.25);
+    font-size: 60px;
+
+    font-family: Barlow Condensed;
+    text-shadow: 1px rgb(255, 255, 255, 0.25);
+  }
+
+  .h2 {
+    color: white;
+    font-size: 60px;
+
+    font-family: Barlow Condensed;
+    text-shadow: 1px 1px white;
+  }
+
+  .bootomline {
+    margin-top: 15px;
+  }
+
+  .topline {
+    margin-bottom: 15px;
+  }
+
+  .titel {
+    margin-left: 20px;
+  }
+
+  header nav {
+    visibility: hidden;
+  }
+
+  footer {
+    margin-top: 200px !important;
+  }
+}
