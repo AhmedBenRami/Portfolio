@@ -1,6 +1,6 @@
 # Portfolio
 
-A modern, professional portfolio website built with HTML, CSS, and clean web design principles. This project showcases a creative and contemporary approach to presenting professional work and services.
+A modern, professional portfolio website built with HTML, CSS, JS, and clean web design principles. This project showcases a creative and contemporary approach to presenting professional work and services.
 
 **🌐 Live Demo:** [https://ahmedbenrami.github.io/Portfolio/](https://ahmedbenrami.github.io/Portfolio/)
 
